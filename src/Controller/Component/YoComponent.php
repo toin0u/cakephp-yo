@@ -9,7 +9,6 @@ use Yo\Yo;
 
 class YoComponent extends Component
 {
-    protected $_defaultConfig = [];
     protected $apiKey;
 
     /**
@@ -23,7 +22,7 @@ class YoComponent extends Component
     /**
      * @return \Yo\Yo
      */
-    public function getYo()
+    public function createYo()
     {
         return new Yo(new CurlHttpAdapter, $this->apiKey);
     }
